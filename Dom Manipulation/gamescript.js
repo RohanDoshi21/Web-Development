@@ -2,10 +2,11 @@ console.log('connected');
 
 //restart game
 
-var restart = document.querySelector('#button');
+var restart = document.querySelector("#b");
 
 // selecting all squares
-var squares = document.querySelectorAll('td');
+var squares = document.querySelectorAll("td");
+console.log(squares.length);
 
 function clearBoard() {
     for (var i = 0; i < squares.length; i++) {
@@ -14,6 +15,7 @@ function clearBoard() {
 };
 
 restart.addEventListener('click', clearBoard);
+
 
 var cellOne = document.querySelector('#one');
 
