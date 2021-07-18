@@ -6,7 +6,6 @@ var restart = document.querySelector("#b");
 
 // selecting all squares
 var squares = document.querySelectorAll("td");
-console.log(squares.length);
 
 function clearBoard() {
     for (var i = 0; i < squares.length; i++) {
@@ -16,15 +15,16 @@ function clearBoard() {
 
 restart.addEventListener('click', clearBoard);
 
+for (var i = 0; i < squares.length; i++) {
+    squares[i].addEventListener('click', ChangeText);
+}
 
-var cellOne = document.querySelector('#one');
-
-cellOne.addEventListener('click', function() {
-    if (cellOne.textContent === '') {
-        cellOne.textContent = "X";
-    } else if (cellOne.textContent === 'X') {
-        cellOne.textContent = '0';
+function ChangeText() {
+    if (this.textContent === '') {
+        this.textContent = "X";
+    } else if (this.textContent === 'X') {
+        this.textContent = '0';
     } else {
-        cellOne.textContent = '';
+        this.textContent = '';
     }
-})
+}
