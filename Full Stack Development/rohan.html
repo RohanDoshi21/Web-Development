@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name ="robots" content ="INDEX, FOLLOW">
+    <title>Rohan</title>
+    <link rel="stylesheet" href="rohan.css">
+    <script src="rohan.js"></script>
+</head>
+<body>
+    
+    <p id="para">ENTER YOUR DETAILS</p>
+    <button id = "bttn" onclick="hide()">Show/Hide</button>
+    <br>
+    <br>
+    current Time is: <span id="Time"></span>
+    <br>
+    <br>
+    <br>
+    
+
+    <form action="backend.php">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name = "myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role:<input type="text" name= "myRole">
+        </div>
+        <br>
+        <div>
+            Email:<input type="email" name = "myEmail">
+        </div>
+        <br>
+        <div>
+            Birthdate:<input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus:<input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            <label for="Eligible">Are you eligible?:</label> <input type="checkbox" name="myeligibility" id="Eligible">
+        </div>
+        <br>
+        <div>
+            Gender: Male<input type="radio" name="myGender"> Female<input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            <label for="Car">Car:</label>
+            <select name="myCar" id="Car">
+                <option value="ind">Inidica</option>
+                <option value="swt">Swift</option>
+                <option value="i20" selected>I20</option>
+                <option value="i10">I10</option>
+            </select>
+        </div>
+        <br>
+        <div id = 'alertt'>
+            Write about yourself:<br> <textarea name="myText" id="" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <!--input type="submit" value="Submit Now" id = "submit"--->
+            <!--button id="submit" onclick="Submit()">Submit</button--->
+            <input type="submit" onclick="return clicked();" value="Sumbit">
+            <input type="reset" value="Reset Now">
+        </div>
+        
+    </form>
+</body>
+</html>
